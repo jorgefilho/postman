@@ -1,0 +1,23 @@
+spring:  
+   jms:
+    listener:
+      auto-startup: true
+hornetq:
+  cluster:
+    - host: XPTO-1
+      port: 5445
+    - host: XPTO-2
+      port: 5445
+  queue:
+    input: /input
+    error: /error
+    success: /success
+    event: /event
+   
+security:
+  basic:
+    enabled: false
+  management:
+    security:
+      enabled: false
+      
